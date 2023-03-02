@@ -1,0 +1,6 @@
+[submodule "src/backend"]
+	path = src/backend
+	url = https://github.com/gpt-3-5-turbo-web/gpt-3-5-turbo-web-backend.git
+[submodule "src/frontend"]
+	path = src/frontend
+	url = https://github.com/gpt-3-5-turbo-web/gpt-3-5-turbo-web-frontend.git

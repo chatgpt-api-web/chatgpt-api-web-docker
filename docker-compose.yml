@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  nginx:
+    restart: "no"
+    image: nginx:1.23.1-alpine
+    ports:
+      - "8899:8899"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./volume/www:/www
+
+  backend:
+    restart: "no"
+    build:
+      context: ./src/backend/
+      args:
+        CHINA_WORKAROUND: true
+    volumes:
+      - ./volume/www:/www
+    environment:
+      - OPENAI_KEY=YOUR_API_KEY_HERE
+      - DJANGO_SUPERUSER_USERNAME=admin
+      - DJANGO_SUPERUSER_EMAIL=admin@example.com
+      - DJANGO_SUPERUSER_PASSWORD=123456
+
+  frontend:
+    restart: "no"
+    build:
+      context: ./src/frontend/
+      args:
+        CHINA_WORKAROUND: true
+    volumes:
+      - ./volume/www:/www
