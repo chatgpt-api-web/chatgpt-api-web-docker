@@ -15,7 +15,7 @@ services:
     build:
       context: ./src/backend/
       args:
-        CHINA_WORKAROUND: true
+        CHINA_WORKAROUND: "false"
     volumes:
       - ./volume/www:/www
     environment:
@@ -29,6 +29,6 @@ services:
     build:
       context: ./src/frontend/
       args:
-        CHINA_WORKAROUND: true
+        CHINA_WORKAROUND: "false"
     volumes:
       - ./volume/www:/www
