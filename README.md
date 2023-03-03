@@ -14,7 +14,7 @@ Your API key is configured in a server. Password is needed before invoking the A
 git clone https://github.com/gpt-3-5-turbo-web/gpt-3-5-turbo-web-docker.git
 cd gpt-3-5-turbo-web-docker/
 git submodule update --init --recursive
-# Specify your `OPENAI_KEY` in docker-compose.yml file. Also pay attention to `CHINA_WORKAROUND` to use a mirror when building the image.
+# Specify your `OPENAI_KEY` in docker-compose.yml file.
 nano docker-compose.yml
 docker-compose build
 docker-compose pull
