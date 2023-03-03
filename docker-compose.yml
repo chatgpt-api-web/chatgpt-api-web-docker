@@ -1,13 +1,18 @@
 version: "3.7"
 
 services:
-  nginx:
+  caddy:
     restart: "no"
-    image: nginx:1.23.1-alpine
+    image: caddy:2.6
     ports:
+      # - "80:80"
+      # - "443:443"
       - "8899:8899"
     volumes:
-      - ./nginx:/etc/nginx/conf.d
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./volume/caddy/data:/data
+      - ./volume/caddy/config:/config
+      - ./volume/caddy/storage:/etc/caddy/storage
       - ./volume/www:/www
 
   backend:

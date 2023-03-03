@@ -1,0 +1,20 @@
+{
+    storage file_system { # store the TLS certificates
+        root /etc/caddy/storage
+    }
+}
+
+# https://www.your-domain.com {
+:8899 {
+    root * /www/
+    handle /backend/* {
+        reverse_proxy * backend:9000
+    }
+    handle {
+        file_server
+    }
+}
+
+:80 {
+    respond 404
+}
