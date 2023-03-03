@@ -10,6 +10,7 @@ TODO: support conversation with history.
 
 ```bash
 git clone https://github.com/gpt-3-5-turbo-web/gpt-3-5-turbo-web-docker.git
+cd gpt-3-5-turbo-web-docker/
 git submodule update --init --recursive
 # Specify your `OPENAI_KEY` in docker-compose.yml file. Also pay attention to `CHINA_WORKAROUND` to use a mirror when building the image.
 nano docker-compose.yml
