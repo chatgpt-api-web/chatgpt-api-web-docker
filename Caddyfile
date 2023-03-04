@@ -7,6 +7,9 @@
 # https://www.your-domain.com {
 :8899 {
     root * /www/
+    handle /backend/static/* {
+        file_server
+    }
     handle /backend/* {
         reverse_proxy * backend:9000
     }
