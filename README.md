@@ -1,4 +1,4 @@
-# gpt-3-5-turbo-web
+# chatgpt-api-web
 
 Access OpenAI's GPT-3.5 model in a web page.
 
@@ -11,8 +11,8 @@ Your API key is configured in a server. Password is needed before invoking the A
 ## Deploy
 
 ```bash
-git clone https://github.com/gpt-3-5-turbo-web/gpt-3-5-turbo-web-docker.git
-cd gpt-3-5-turbo-web-docker/
+git clone https://github.com/chatgpt-api-web/chatgpt-api-web-docker.git
+cd chatgpt-api-web-docker/
 git submodule update --init --recursive
 # Specify your `OPENAI_KEY` in docker-compose.yml file.
 nano docker-compose.yml

@@ -1,6 +1,6 @@
 [submodule "src/backend"]
 	path = src/backend
-	url = https://github.com/gpt-3-5-turbo-web/gpt-3-5-turbo-web-backend.git
+	url = https://github.com/chatgpt-api-web/chatgpt-api-web-backend.git
 [submodule "src/frontend"]
 	path = src/frontend
-	url = https://github.com/gpt-3-5-turbo-web/gpt-3-5-turbo-web-frontend.git
+	url = https://github.com/chatgpt-api-web/chatgpt-api-web-frontend.git
