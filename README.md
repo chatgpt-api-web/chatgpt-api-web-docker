@@ -1,6 +1,6 @@
 # chatgpt-api-web
 
-Access OpenAI's GPT-3.5 model in a web page.
+Access OpenAI's GPT model in a web page.
 
 Your API key is configured in a server. Password is needed before invoking the API.
 
